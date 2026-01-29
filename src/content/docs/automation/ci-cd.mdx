@@ -1,0 +1,30 @@
+---
+title: CI/CD for QA
+description: Run your tests continuously in a delivery pipeline.
+---
+
+# CI/CD for QA
+
+## Objectives
+
+- Integrate automated tests into a CI pipeline.
+- Provide fast, actionable feedback on each change.
+
+## Where tests fit in the pipeline
+
+- Unit tests → on every commit.
+- API and UI smoke tests → on main branch and before releases.
+- Full regression → nightly or on-demand.
+
+## Common platforms
+
+- GitHub Actions
+- Jenkins
+- GitLab CI
+
+## Best practices
+
+- Keep pipelines **fast** and **reliable**.
+- Fail fast and surface root cause clearly.
+- Separate smoke vs. full regression suites.
+

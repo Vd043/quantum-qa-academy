@@ -1,0 +1,19 @@
+{
+  "name": "quantum-qa-academy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.37.4",
+    "astro": "^5.7.12"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

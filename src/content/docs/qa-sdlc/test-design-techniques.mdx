@@ -1,0 +1,31 @@
+---
+title: Test Design Techniques
+description: Design high-value test cases using systematic techniques.
+---
+
+# Test Design Techniques
+
+## Why techniques matter
+
+Good test design finds important bugs **early** with **fewer** cases.
+
+## Core techniques
+
+- **Equivalence Partitioning (EP)** – group inputs into valid/invalid classes.
+- **Boundary Value Analysis (BVA)** – focus on edges where bugs cluster.
+- **Decision Tables** – capture complex business rules.
+- **State Transition Testing** – model systems that change state.
+
+## Example: boundary values
+
+For an input range `1–10`:
+
+- Valid: 1, 10
+- Just outside: 0, 11
+
+## Practical checklist
+
+- [ ] At least one technique is applied per feature.
+- [ ] Boundaries are explicitly tested.
+- [ ] Business rules are captured in a decision table where applicable.
+
