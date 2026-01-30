@@ -1,19 +1,31 @@
 {
   "name": "quantum-qa-academy",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite",
+    "dev:start": "bash scripts/kill-and-dev.sh",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.37.4",
-    "astro": "^5.7.12"
+    "clsx": "latest",
+    "framer-motion": "^12.0.0",
+    "lucide-react": "latest",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.13.0",
+    "tailwind-merge": "latest"
   },
   "devDependencies": {
-    "typescript": "^5.6.0"
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10"
   }
 }

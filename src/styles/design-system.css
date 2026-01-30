@@ -1,0 +1,222 @@
+/* ==========================================================================
+   QuantumQA Academy — Design system (architect-grade)
+   Dark luxury + teal accent. Strong typography, generous space, micro-motion.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer starlight.base {
+  :root,
+  ::backdrop {
+    /* — Teal accent (primary brand) — */
+    --sl-hue-accent: 174;
+    --sl-color-accent-low: hsl(var(--sl-hue-accent), 40%, 18%);
+    --sl-color-accent: hsl(var(--sl-hue-accent), 80%, 45%);
+    --sl-color-accent-high: hsl(var(--sl-hue-accent), 90%, 70%);
+    --sl-color-text-accent: var(--sl-color-accent-high);
+    --sl-color-text-invert: var(--sl-color-accent-low);
+    --sl-color-bg-accent: var(--sl-color-accent-high);
+
+    /* — Dark luxury base — */
+    --sl-color-bg: hsl(222, 18%, 8%);
+    --sl-color-black: hsl(222, 18%, 5%);
+    --sl-color-bg-nav: hsl(222, 14%, 11%);
+    --sl-color-bg-sidebar: hsl(222, 14%, 10%);
+    --sl-color-gray-6: hsl(222, 12%, 14%);
+    --sl-color-gray-5: hsl(222, 10%, 20%);
+    --sl-color-gray-4: hsl(222, 8%, 28%);
+    --sl-color-gray-3: hsl(222, 6%, 48%);
+    --sl-color-gray-2: hsl(222, 8%, 72%);
+    --sl-color-gray-1: hsl(222, 12%, 90%);
+    --sl-color-white: hsl(0, 0%, 100%);
+    --sl-color-hairline: hsl(222, 12%, 18%);
+    --sl-color-hairline-light: hsl(222, 10%, 22%);
+    --sl-color-hairline-shade: var(--sl-color-black);
+    --sl-color-backdrop-overlay: hsla(222, 18%, 5%, 0.85);
+
+    /* — Typography (editorial scale) — */
+    --sl-font: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    --sl-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sl-text-6xl: 4.5rem;
+    --sl-text-5xl: 3rem;
+    --sl-text-4xl: 2.25rem;
+    --sl-text-3xl: 1.875rem;
+    --sl-text-2xl: 1.5rem;
+    --sl-text-xl: 1.25rem;
+    --sl-text-lg: 1.125rem;
+    --sl-line-height-headings: 1.15;
+    --sl-line-height: 1.65;
+
+    /* — Spacing & layout — */
+    --sl-nav-height: 4rem;
+    --sl-sidebar-width: 20rem;
+    --sl-content-width: 52rem;
+    --sl-content-pad-x: 2rem;
+    --sl-main-pad: 0 0 4rem 0;
+    --sl-nav-pad-x: 1.5rem;
+    --sl-sidebar-pad-x: 1.25rem;
+
+    /* — Motion — */
+    --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --motion-duration-fast: 0.2s;
+    --motion-duration-normal: 0.35s;
+    --motion-duration-slow: 0.5s;
+
+    /* — Shadows (depth) — */
+    --sl-shadow-sm: 0 2px 4px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.15);
+    --sl-shadow-md: 0 8px 24px hsla(0, 0%, 0%, 0.25), 0 4px 8px hsla(0, 0%, 0%, 0.2);
+    --sl-shadow-lg: 0 24px 48px hsla(0, 0%, 0%, 0.35), 0 12px 24px hsla(0, 0%, 0%, 0.25);
+  }
+}
+
+/* — Hub homepage: hero and cards — */
+@layer starlight.components {
+  /* Hero container: full-bleed, cinematic */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 42vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(3rem, 8vw, 6rem) var(--sl-content-pad-x);
+    margin-inline: calc(-1 * var(--sl-content-pad-x));
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, hsl(174, 60%, 18% / 0.4) 0%, transparent 55%),
+      linear-gradient(180deg, hsl(222, 18%, 6%) 0%, var(--sl-color-bg) 100%);
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .hero .copy {
+    text-align: center;
+    max-width: 42rem;
+    margin-inline: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.25rem, 5vw, var(--sl-text-6xl));
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: var(--sl-line-height-headings);
+    color: var(--sl-color-white);
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 40px hsl(174, 80%, 45% / 0.15);
+  }
+
+  .hero .tagline {
+    font-size: clamp(1rem, 2vw, var(--sl-text-xl));
+    color: var(--sl-color-gray-2);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .hero .actions a {
+    transition: transform var(--motion-duration-fast) var(--motion-ease-out),
+      box-shadow var(--motion-duration-normal) var(--motion-ease-out);
+  }
+
+  .hero .actions a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px hsl(174, 80%, 45% / 0.25);
+  }
+
+  /* — Big hub cards (homepage) — */
+  .sl-stack + .card-grid,
+  .content .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 50rem) {
+    .content .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 72rem) {
+    .content .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+  }
+
+  .sl-link-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--sl-color-hairline);
+    background: hsl(222, 14%, 10% / 0.6);
+    backdrop-filter: blur(8px);
+    transition:
+      border-color var(--motion-duration-normal) var(--motion-ease-out),
+      background var(--motion-duration-normal) var(--motion-ease-out),
+      transform var(--motion-duration-fast) var(--motion-ease-out),
+      box-shadow var(--motion-duration-normal) var(--motion-ease-out);
+  }
+
+  .sl-link-card:hover {
+    border-color: hsl(174, 60%, 40% / 0.5);
+    background: hsl(222, 14%, 12% / 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .sl-link-card .title {
+    font-size: var(--sl-text-xl);
+    font-weight: 600;
+  }
+
+  .sl-link-card .description {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+    margin-top: 0.35rem;
+  }
+
+  /* — Section headings (hub) — */
+  .content h2 {
+    font-size: var(--sl-text-2xl);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--sl-color-white);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .content h3 {
+    font-size: var(--sl-text-lg);
+    font-weight: 600;
+    color: var(--sl-color-gray-2);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* — Nav bar refinement — */
+  header {
+    border-bottom: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg-nav);
+  }
+
+  /* — Sidebar refinement — */
+  aside {
+    border-right: 1px solid var(--sl-color-hairline);
+  }
+
+  /* — Smooth focus and links — */
+  a {
+    transition: color var(--motion-duration-fast) var(--motion-ease-out);
+  }
+
+  a:hover {
+    color: var(--sl-color-accent-high);
+  }
+}

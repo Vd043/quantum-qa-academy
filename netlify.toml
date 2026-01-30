@@ -1,0 +1,10 @@
+# Deploy the built site (run npm run build first, or use build command below)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA: serve index.html for all routes (if you add client-side routing later)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

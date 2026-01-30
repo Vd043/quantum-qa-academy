@@ -1,71 +1,83 @@
 ---
 title: Welcome to QuantumQA Academy
 description: A world-class learning hub for QA SDLC, automation, system design, and AI.
+hero:
+  title: QuantumQA Academy
+  tagline: Master QA, automation, system design, and AI through curated learning paths. Built for long, focused sessions—clear structure, zero fluff.
+  actions:
+    - text: Start Beginner Path
+      link: /learning-paths/beginner-qa
+      variant: primary
+    - text: Browse all paths
+      link: /learning-paths/
+      variant: secondary
 ---
-
-# QuantumQA Academy
-
-Master QA, automation, system design, and AI through curated, practical learning paths.
-
-> **Goal:** Keep you exploring for long, focused sessions with clear paths and zero fluff.
 
 ## Choose your learning path
 
-- **Beginner QA Path**  
-  Build a strong foundation in QA SDLC, test design, and documentation.  
-  → [/learning-paths/beginner-qa](./learning-paths/beginner-qa)
-
-- **Automation Engineer Path**  
-  Go from zero to building robust UI & API automation with CI/CD.  
-  → [/learning-paths/automation-engineer](./learning-paths/automation-engineer)
-
-- **System Design Path**  
-  Understand how large systems are designed and how QA fits in.  
-  → [/learning-paths/system-design](./learning-paths/system-design)
-
-- **AI & LLM Path**  
-  Use AI to design tests, generate data, and accelerate your QA work.  
-  → [/learning-paths/ai-llm](./learning-paths/ai-llm)
+<CardGrid stagger>
+  <LinkCard
+    title="Beginner QA Path"
+    href="/learning-paths/beginner-qa"
+    description="Build a strong foundation in QA SDLC, test design, and documentation."
+  />
+  <LinkCard
+    title="Automation Engineer Path"
+    href="/learning-paths/automation-engineer"
+    description="Go from zero to robust UI & API automation with CI/CD."
+  />
+  <LinkCard
+    title="System Design Path"
+    href="/learning-paths/system-design"
+    description="Understand how large systems are designed and how QA fits in."
+  />
+  <LinkCard
+    title="AI & LLM Path"
+    href="/learning-paths/ai-llm"
+    description="Use AI to design tests, generate data, and accelerate your work."
+  />
+</CardGrid>
 
 ## Explore by topic
 
 ### QA SDLC
 
-Understand the full lifecycle: from strategy and planning to execution and reporting.
-
-- [QA SDLC Overview](./qa-sdlc/overview)
-- [Test Strategy & Plans](./qa-sdlc/test-strategy)
-- [Test Design Techniques](./qa-sdlc/test-design-techniques)
-- [Test Execution & Reporting](./qa-sdlc/test-reporting)
+<CardGrid>
+  <LinkCard title="QA SDLC Overview" href="/qa-sdlc/overview" description="End-to-end lifecycle from planning to closure." />
+  <LinkCard title="Test Strategy & Plans" href="/qa-sdlc/test-strategy" description="Define how, what, and when you test." />
+  <LinkCard title="Test Design Techniques" href="/qa-sdlc/test-design-techniques" description="Design high-value test cases systematically." />
+  <LinkCard title="Test Execution & Reporting" href="/qa-sdlc/test-reporting" description="Execute tests and communicate status clearly." />
+</CardGrid>
 
 ### Automation
 
-Hands-on guides for UI, mobile, and API automation and CI/CD.
-
-- [Automation Foundations](./automation/foundations)
-- [Selenium + Java](./automation/selenium-java)
-- [Appium Basics](./automation/appium)
-- [API Testing](./automation/api-testing)
-- [CI/CD for QA](./automation/ci-cd)
+<CardGrid>
+  <LinkCard title="Automation Foundations" href="/automation/foundations" description="When and how to use test automation." />
+  <LinkCard title="Selenium + Java" href="/automation/selenium-java" description="Reliable UI automation with Selenium and Java." />
+  <LinkCard title="Appium Basics" href="/automation/appium" description="Get started with mobile automation." />
+  <LinkCard title="API Testing" href="/automation/api-testing" description="Design and automate high-value API tests." />
+  <LinkCard title="CI/CD for QA" href="/automation/ci-cd" description="Run tests continuously in your pipeline." />
+</CardGrid>
 
 ### System Design & Architecture
 
-Think like an architect, test like a detective.
-
-- [System Design for QA](./system-design/qa-perspective)
-- [Performance & Reliability](./system-design/perf-reliability)
+<CardGrid>
+  <LinkCard title="System Design for QA" href="/system-design/qa-perspective" description="View system design through a QA lens." />
+  <LinkCard title="Performance & Reliability" href="/system-design/perf-reliability" description="Tests for scalability and resilience." />
+</CardGrid>
 
 ### AI & LLMs
 
-Practical AI use cases for testers.
-
-- [AI for Testers](./ai-llms/ai-for-testers)
-- [Prompting for QA](./ai-llms/prompting)
-- [AI Test Data Generation](./ai-llms/test-data-generation)
+<CardGrid>
+  <LinkCard title="AI for Testers" href="/ai-llms/ai-for-testers" description="Practical ways QA can use AI today." />
+  <LinkCard title="Prompting for QA" href="/ai-llms/prompting" description="Prompts that produce reliable, structured outputs." />
+  <LinkCard title="AI Test Data Generation" href="/ai-llms/test-data-generation" description="Use AI for realistic, edge-case test data." />
+</CardGrid>
 
 ## Resources
 
-- [Glossary](./resources/glossary)
-- [Cheat Sheets](./resources/cheat-sheets)
-- [Roadmaps](./resources/roadmaps)
-
+<CardGrid>
+  <LinkCard title="Glossary" href="/resources/glossary" description="Key QA, automation, and AI terms." />
+  <LinkCard title="Cheat Sheets" href="/resources/cheat-sheets" description="Quick-reference for busy engineers." />
+  <LinkCard title="Roadmaps" href="/resources/roadmaps" description="Career and learning roadmaps." />
+</CardGrid>
